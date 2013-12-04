@@ -1,0 +1,7 @@
+Bundle-Version: 0.1.0
+Export-Package: org.greenscape.organization.util,\
+	org.greenscape.organization.impl
+-buildpath: org.greenscape.persistence;version=latest,\
+	org.amdatu.web.rest.jaxrs,\
+	javax.persistence,\
+	org.greenscape.organization;version=latest
