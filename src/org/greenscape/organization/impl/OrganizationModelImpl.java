@@ -6,7 +6,8 @@ import org.greenscape.organization.OrganizationModel;
 import org.greenscape.persistence.PersistedModelBase;
 
 @Entity(name = OrganizationModel.MODEL_NAME)
-public class OrganizationModelImpl extends PersistedModelBase implements OrganizationModel {
+public class OrganizationModelImpl extends PersistedModelBase implements
+		OrganizationModel {
 	private static final long serialVersionUID = -2392049292137025175L;
 
 	public OrganizationModelImpl() {
@@ -17,21 +18,10 @@ public class OrganizationModelImpl extends PersistedModelBase implements Organiz
 		setHomeURL(model.getHomeURL());
 		setLogoId(model.getLogoId());
 		setMaxUsers(model.getMaxUsers());
-		setCreateDate(model.getCreateDate());
+		setCreatedDate(model.getCreatedDate());
 		setModifiedDate(model.getModifiedDate());
 		setName(model.getName());
 		setOrganizationId(model.getOrganizationId());
-	}
-
-	@Override
-	public Long getOrganizationId() {
-		return (Long) getProperty(ORGANIZATION_ID);
-	}
-
-	@Override
-	public OrganizationModel setOrganizationId(Long organisationId) {
-		setProperty(ORGANIZATION_ID, organisationId);
-		return this;
 	}
 
 	@Override
@@ -80,12 +70,12 @@ public class OrganizationModelImpl extends PersistedModelBase implements Organiz
 
 	@Override
 	public Boolean isActive() {
-		return (Boolean) getProperty(IS_ACTIVE);
+		return (Boolean) getProperty(ACTIVE);
 	}
 
 	@Override
 	public OrganizationModel setActive(Boolean active) {
-		setProperty(IS_ACTIVE, active);
+		setProperty(ACTIVE, active);
 		return this;
 	}
 
